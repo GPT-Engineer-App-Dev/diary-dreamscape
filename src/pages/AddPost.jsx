@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Container, FormControl, FormLabel, Input, Textarea, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, FormControl, FormLabel, Input, Textarea, VStack, useColorModeValue } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 const AddPost = () => {
@@ -17,7 +17,7 @@ const AddPost = () => {
 
   return (
     <Container maxW="container.md">
-      <Box as="form" onSubmit={handleSubmit} p={5} shadow="md" borderWidth="1px">
+      <Box as="form" onSubmit={handleSubmit} p={5} shadow="md" borderWidth="1px" bg={useColorModeValue("white", "gray.900")}>
         <VStack spacing={4} align="stretch">
           <FormControl id="title" isRequired>
             <FormLabel>Title</FormLabel>

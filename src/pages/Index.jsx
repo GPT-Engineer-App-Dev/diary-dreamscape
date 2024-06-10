@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading, Link, Text, VStack, Button } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Link, Text, VStack, Button, useColorModeValue } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <Container maxW="container.xl">
       {/* Header */}
-      <Box as="header" bg="brand.800" color="white" py={4} mb={8}>
+      <Box as="header" bg={useColorModeValue("brand.800", "gray.800")} color={useColorModeValue("white", "gray.200")} py={4} mb={8}>
         <Flex justify="space-between" align="center">
           <Heading as="h1" size="lg" ml={4}>
             My Personal Blog
@@ -32,7 +32,7 @@ const Index = () => {
       </Box>
 
       {/* Main Content */}
-      <Box as="main" flex="1">
+      <Box as="main" flex="1" bg={useColorModeValue("white", "gray.900")}>
         <Button as={RouterLink} to="/add-post" colorScheme="blue" mb={4}>
           Add New Post
         </Button>
@@ -55,7 +55,7 @@ const Index = () => {
       </Box>
 
       {/* Footer */}
-      <Box as="footer" bg="brand.800" color="white" py={4} mt={8}>
+      <Box as="footer" bg={useColorModeValue("brand.800", "gray.800")} color={useColorModeValue("white", "gray.200")} py={4} mt={8}>
         <Text textAlign="center">© 2023 My Personal Blog. All rights reserved.</Text>
       </Box>
     </Container>
