@@ -2,7 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Index from "./pages/Index.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import { IconButton, useColorMode } from "@chakra-ui/react";
-import { SunIcon, MoonIcon } from "react-icons/fa";
+import { SunIcon, MoonIcon } from "react-icons/fi";
 
 function App() {
   const ColorModeSwitcher = () => {
